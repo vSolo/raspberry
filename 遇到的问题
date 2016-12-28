@@ -1,0 +1,49 @@
+一、关于info.py
+pi@Gh0st:~/python $ python info.py 
+gpu Temp: 43.50 
+cpu Temp: 42.93
+Traceback (most recent call last):
+  File "info.py", line 51, in <module>
+    main()
+  File "info.py", line 20, in main
+    load_1min=float(load_1min)
+ValueError: invalid literal for float(): 0.00
+ 二、关于weather—_aqi.py
+2016-12-28，执行脚本时，没有反应，提示错误如下：
+ pi@Gh0st:~/python $ python weather_aqi.py 
+^CTraceback (most recent call last):
+  File "weather_aqi.py", line 109, in <module>
+    token=get_token()
+  File "weather_aqi.py", line 81, in get_token
+    resp = urllib2.urlopen(req)
+  File "/usr/lib/python2.7/urllib2.py", line 154, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python2.7/urllib2.py", line 431, in open
+    response = self._open(req, data)
+  File "/usr/lib/python2.7/urllib2.py", line 449, in _open
+    '_open', req)
+  File "/usr/lib/python2.7/urllib2.py", line 409, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python2.7/urllib2.py", line 1240, in https_open
+    context=self._context)
+  File "/usr/lib/python2.7/urllib2.py", line 1194, in do_open
+    h.request(req.get_method(), req.get_selector(), req.data, headers)
+  File "/usr/lib/python2.7/httplib.py", line 1039, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python2.7/httplib.py", line 1073, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python2.7/httplib.py", line 1035, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python2.7/httplib.py", line 879, in _send_output
+    self.send(msg)
+  File "/usr/lib/python2.7/httplib.py", line 841, in send
+    self.connect()
+  File "/usr/lib/python2.7/httplib.py", line 1250, in connect
+    server_hostname=server_hostname)
+  File "/usr/lib/python2.7/ssl.py", line 350, in wrap_socket
+    _context=self)
+  File "/usr/lib/python2.7/ssl.py", line 566, in __init__
+    self.do_handshake()
+  File "/usr/lib/python2.7/ssl.py", line 788, in do_handshake
+    self._sslobj.do_handshake()
+KeyboardInterrupt
